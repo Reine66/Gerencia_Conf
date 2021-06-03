@@ -3,7 +3,7 @@ package br.com.ufam.conversor;
 public class Temperatura{
     private double temperatura;
 
-    public Temperatura(double){
+    public Temperatura(double temperatura){
         this.setTemperatura(temperatura);
     }
 
