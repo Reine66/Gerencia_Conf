@@ -7,19 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ConversorCelsiusTest {
 
-    private Conversor conversorTest;
+    private Conversor_temp conversorTest;
+    private Conversor_temp conversorTestF;
 
     @BeforeEach
     public void setup(){
-        conversorTest = new Conversor('C', 10);
-    }
-
-    @Test
-    public void testeConvertendoDeCelsiusParaKelvin() {
-        conversorTest.converter('K');
-
-        assertEquals(conversorTest.getTemp().getEscala(), 'K');
-        assertEquals(conversorTest.getTemp().getTemperatura(), 283.00);
+        conversorTest = new Conversor_temp('C', 10);
+        conversorTestF = new Conversor_temp('F', 32);
     }
 
     @Test
@@ -28,5 +22,13 @@ public class ConversorCelsiusTest {
 
         assertEquals(conversorTest.getTemp().getEscala(), 'F');
         assertEquals(conversorTest.getTemp().getTemperatura(), 50.00);
+    }
+
+    @Test
+    public void testeConvertendoDeFahrenheitParaCelsius() {
+        conversorTestF.converter('C');
+
+        assertEquals(conversorTestF.getTemp().getEscala(), 'C');
+        assertEquals(conversorTestF.getTemp().getTemperatura(), 0.00);
     }
 }
