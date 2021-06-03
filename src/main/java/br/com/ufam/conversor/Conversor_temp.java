@@ -41,12 +41,10 @@ public class Conversor_temp{
 
         switch(escalaParaConverter){
             case 'C':
-                if(this.getTemp().getEscala()=='K') this.kelvinParaCelsius();
-                else if(this.getTemp().getEscala()=='F') this.fahrenheitParaCelsius();
+                if(this.getTemp().getEscala()=='F') this.fahrenheitParaCelsius();
                 break;
             case 'F':
                 if(this.getTemp().getEscala()=='C') this.celsiusParaFahrenheit();
-                else if(this.getTemp().getEscala()=='K') this.kelvinParaFahrenheit();
                 break;
         }
     }
