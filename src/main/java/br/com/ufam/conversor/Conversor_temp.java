@@ -12,26 +12,28 @@ public class Conversor_temp{
     }
 
     public void celsiusParaFahrenheit(){
-        double tempCelsius, tempFahrenheit;
+        double Celsius, Fahrenheit;
 
-        tempCelsius = this.getTemp().getTemperatura();
-        tempFahrenheit = (1.8 * tempCelsius) + 32.0;
+        Celsius = this.getTemp().getTemperatura();
+        Fahrenheit = (( 9.0 / 5.0 ) * Celsius) + 32.0;
 
-        this.getTemp().setTemperatura(tempFahrenheit);
-        System.out.printf("Temperatura: %.2f ºC\n", tempCelsius);
+        this.getTemp().setTemperatura(Fahrenheit);
+        System.out.printf("----------------------------");
+        System.out.printf("Temperatura: %.2f ºC\n", Celsius);
         System.out.println("O valor é:");
         System.out.printf("Temperatura: %.2f ºF\n", this.getTemp().getTemperatura());
     }
 
    
     public void fahrenheitParaCelsius(){
-        double tempFahrenheit, tempCelsius;
+        double Fahrenheit, Celsius;
 
-        tempFahrenheit = this.getTemp().getTemperatura();
-        tempCelsius = (tempFahrenheit - 32.0) / 1.8;
+        Fahrenheit = this.getTemp().getTemperatura();
+        Celsius = (Fahrenheit - 32.0) * ( 5.0 / 9.0 );
 
-        this.getTemp().setTemperatura(tempCelsius);
-        System.out.printf("Temperatura: %.2f ºF\n", tempFahrenheit);
+        this.getTemp().setTemperatura(Celsius);
+        System.out.printf("----------------------------");
+        System.out.printf("Temperatura: %.2f ºF\n", Fahrenheit);
         System.out.println("O valor é:");
         System.out.printf("Temperatura: %.2f ºC\n", this.getTemp().getTemperatura());
     }

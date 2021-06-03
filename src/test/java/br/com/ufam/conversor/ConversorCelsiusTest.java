@@ -12,21 +12,37 @@ public class ConversorCelsiusTest {
 
     @BeforeEach
     public void setup(){
-        conversorTest = new Conversor_temp('C', 10);
-        conversorTestF = new Conversor_temp('F', 32);
+        conversorTestF1 = new Conversor_temp('F', 32);
+        conversorTestF2 = new Conversor_temp('F', 104);
+        conversorTestC1 = new Conversor_temp('C', 10);
+        conversorTestC2 = new Conversor_temp('C', 40);
     }
 
     @Test
-    public void testeConvertendoDeCelsiusParaFahrenheit() {
-        conversorTest.converter('F');
+    public void testeFahrenheitCelsius1() {
+        conversorTestF1.converter('C');
 
-        assertEquals(conversorTest.getTemp().getTemperatura(), 50.00);
+        assertEquals(conversorTestF1.getTemp().getTemperatura(), 0.00);
     }
 
     @Test
-    public void testeConvertendoDeFahrenheitParaCelsius() {
-        conversorTestF.converter('C');
-        
-        assertEquals(conversorTestF.getTemp().getTemperatura(), 0.00);
+    public void testeCelsiusFahrenheit1() {
+        conversorTestC1.converter('F');
+
+        assertEquals(conversorTestC1.getTemp().getTemperatura(), 50.00);
+    }
+
+    @Test
+    public void testeFahrenheitCelsius2() {
+        conversorTestF2.converter('C');
+
+        assertEquals(conversorTestF2.getTemp().getTemperatura(), 40.00);
+    }
+
+    @Test
+    public void testeCelsiusFahrenheit2() {
+        conversorTestC2.converter('F');
+
+        assertEquals(conversorTestC2.getTemp().getTemperatura(), 104.00);
     }
 }
