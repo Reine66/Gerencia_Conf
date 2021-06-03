@@ -38,7 +38,7 @@ public class ConversorCelsiusTest {
     public void testeFahrenheitCelsius2() {
         this.conversorTestF2.converter('C');
 
-        assertEquals(conversorTestF2.getTemp().getTemperatura(), 80.00);
+        assertEquals(conversorTestF2.getTemp().getTemperatura(), 40.00);
     }
 
     @Test
