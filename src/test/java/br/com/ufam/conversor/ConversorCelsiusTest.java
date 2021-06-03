@@ -7,8 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ConversorCelsiusTest {
 
-    private Conversor_temp conversorTest;
-    private Conversor_temp conversorTestF;
+    private Conversor_temp conversorTestF1;
+    private Conversor_temp conversorTestF2;
+    private Conversor_temp conversorTestC1;
+    private Conversor_temp conversorTestC2;
 
     @BeforeEach
     public void setup(){
@@ -34,7 +36,7 @@ public class ConversorCelsiusTest {
 
     @Test
     public void testeFahrenheitCelsius2() {
-        conversorTestF2.converter('C');
+        this.conversorTestF2.converter('C');
 
         assertEquals(conversorTestF2.getTemp().getTemperatura(), 40.00);
     }
