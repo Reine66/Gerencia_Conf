@@ -20,15 +20,13 @@ public class ConversorCelsiusTest {
     public void testeConvertendoDeCelsiusParaFahrenheit() {
         conversorTest.converter('F');
 
-        assertEquals(conversorTest.getTemp().getEscala(), 'F');
         assertEquals(conversorTest.getTemp().getTemperatura(), 50.00);
     }
 
     @Test
     public void testeConvertendoDeFahrenheitParaCelsius() {
         conversorTestF.converter('C');
-
-        assertEquals(conversorTestF.getTemp().getEscala(), 'C');
+        
         assertEquals(conversorTestF.getTemp().getTemperatura(), 0.00);
     }
 }
